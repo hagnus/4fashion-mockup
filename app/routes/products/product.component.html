@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <h3 class="">Novo Produto</h3>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <a href="#" class="thumbnail">
+                <img class="img-responsive img-rounded" src="http://www.guiaondevamos.com.br/wp-content/uploads/Moda1.png">
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <button class="btn btn-danger col-xs-12">
+                <i class="glyphicon glyphicon-plus" ></i> Adicionar Foto
+            </button>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group ">
+                <label for="inputAvatar">Endereço da imagem</label>
+                <input type="text" class="form-control" id="inputAvatar" [(ngModel)]="currentProduct.avatar" placeholder="Endereço da Imagem">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="alert alert-danger" *ngIf="message" role="alert">{{message}}</div>
+
+    <div class="form-group ">
+        <label for="inputProduct">Produto</label>
+        <input type="text" class="form-control" id="inputProduct" [(ngModel)]="currentProduct.name" placeholder="Nome do Produto">
+    </div>
+
+    <div class="form-group ">
+        <label for="inputDescription">Descrição</label>
+        <textarea class="form-control" rows="3" id="inputDescription" [(ngModel)]="currentProduct.description" ></textarea>
+    </div>
+
+    <div class="form-group ">
+        <label for="inputPrice">Preco</label>
+        <input type="number" class="form-control" id="inputPrice" [(ngModel)]="currentProduct.price" placeholder="Preço">
+    </div>
+
+    <div class="form-group ">
+        <input type="checkbox" aria-label="P"><span>P  </span>
+        <input type="checkbox" aria-label="M"><span>M  </span>
+        <input type="checkbox" aria-label="G"><span>G  </span>
+        <input type="checkbox" aria-label="GG"><span>GG  </span>
+    </div>
+
+    <div class="form-group ">
+        <div class="col-xs-6">
+            <button (click)="createProduct(currentProduct)" class="btn btn-default col-xs-12" >Confirmar</button>
+        </div>
+        <div class="col-xs-6">
+            <button class="btn btn-danger col-xs-12">Cancelar</button>
+        </div>
+    </div>
+</div>

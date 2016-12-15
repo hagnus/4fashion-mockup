@@ -1,0 +1,49 @@
+.profile-card   {
+    background: #f3f3f3;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid #dcdcdc;
+}
+
+.profile-card img  {
+    margin: 2px auto;
+    max-width: 70px;
+}
+
+.profile-detail-card {
+
+}
+
+.profile-detail-card img  {
+    margin: 2px auto;
+    max-width: 50px;
+}
+
+.right {
+    float: right;
+}
+
+h5 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 0px;
+}
+
+h3 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.list-group {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.btn-product {
+    position: absolute;
+    float: right;
+    top: 10px;
+    right: 25px;
+}

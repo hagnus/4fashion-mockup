@@ -1,0 +1,21 @@
+.navbar {
+    color: #e4d89a;
+    background-color: #7b4c31;
+    border-color: #693e25;
+    border-radius: 0px;
+}
+
+.navbar-brand,
+.navbar-text,
+.navbar-nav > li > a
+{
+    color: #e4d89a;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #e4d89a;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #7b4c31;
+}

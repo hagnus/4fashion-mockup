@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'tituloIndex';
+    src: url(../fonts/CaviarDreams_Bold.ttf);
+}
+
+@font-face {
+    font-family: 'corpo';
+    src: url(../fonts/segoeui.ttf);
+}
+
+@font-face {
+    font-family: 'corpoLeve';
+    src: url(../fonts/segoeuil.ttf);
+}
+
+@font-face {
+    font-family: 'corpoBold';
+    src: url(../fonts/seguisb.ttf);
+}
+
+html {
+    font-family: 'corpoBold' !important;
+    color: #3f3f3f !important;
+}
+
+body {
+    font-family: 'corpoBold' !important;
+    color: #3f3f3f !important;
+}
+
+nav {
+    border-radius: 0px !important;
+}
+
+.btn-default {
+    color: #9d9d9d !important;
+    background-color: #222 !important;
+    border-color: #080808 !important;
+}
+.btn-default:focus,
+.btn-default.focus {
+    color: #fff !important;
+    background-color: #111 !important;
+    border-color: #000 !important;
+}
+.btn-default:hover {
+    color: #fff !important;
+    background-color: #111 !important;
+    border-color: #000 !important;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    color: #fff !important;
+    background-color: #111 !important;
+    border-color: #000 !important;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+    color: #fff !important;
+    background-color: #111 !important;
+    border-color: #000 !important;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    background-image: none !important;
+}
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus {
+    background-color: #fff !important;
+    border-color: #000 !important;
+}
+.btn-default .badge {
+    color: #fff !important;
+    background-color: #111 !important;
+}

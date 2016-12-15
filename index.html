@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="app/icons/favicon2.png" />
+
+    <title>4Fashion - Fique na moda</title>
+
+    <base href="/">
+
+    <!-- css -->
+    <!-- load bootstrap and some simple css -->
+    <link rel="stylesheet" href="app/css/app.css">
+    <link rel="stylesheet" href="app/css/bootstrap.css">
+
+    <!-- js -->
+    <!-- load polyfills and angular dependencies -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+    <!-- load our angular app with systemjs -->
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err) { console.error(err); });
+    </script>
+</head>
+<body>
+
+    <app-header></app-header>
+</body>
+</html>

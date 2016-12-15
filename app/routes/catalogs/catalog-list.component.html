@@ -1,0 +1,12 @@
+<h1>Catálogos</h1>
+
+<div class="" *ngIf="catalogs">
+    <div class="col-sm-4" *ngFor="let catalog of catalogs">
+        <div class="profile-card" [routerLink]="['/catalog', catalog.catalogId]">
+            <img [src]="catalog.avatar" class="img-responsive img-rounded">
+            <h3>{{ catalog.name }} </h3>
+            <h6>{{ catalog.description }}</h6>
+            <h5>{{catalog.version}}</h5>
+        </div>
+    </div>
+</div>

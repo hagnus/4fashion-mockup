@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualiza Catálogo</title>
+</head>
+<body>
+    <div class="container-fluid" *ngIf="catalog">
+        <div class="row">
+            <h2 class="col-xs-12">
+                {{catalog.name}} <span>(Versão: {{catalog.version}})</span>
+            </h2>
+        </div>
+
+        <div class="row">
+            <h4 class="col-xs-6 col-sm-8" >Categorias: </h4>
+            <div class="col-xs-6 col-sm-4 ">
+                <div class="btn btn-warning right" [routerLink]="['/category', catalog.catalogId]">
+                    <i class="glyphicon glyphicon-plus" ></i> Categoria
+                </div>
+            </div>
+        </div>
+
+        <div class="row" *ngIf="catalog.categories">
+            <div class="col-sm-6 col-lg-4" *ngFor="let category of catalog.categories" >
+                <div class="profile-card container-fluid" (click)="displayProducts(category)">
+                    <div class="container-fluid">
+                        <h3 >
+                            {{ category.name }}
+                        </h3>
+
+                        <h5 >
+                            {{category.products.length}} produtos
+                        </h5>
+
+                        <button [routerLink]="['/product', catalog.catalogId, category.categoryId]" class="btn btn-warning btn-xs btn-product">
+                            <i class="glyphicon glyphicon-plus" ></i> Produto
+                        </button>
+                    </div>
+                    <div class="col-xs-12" *ngIf="currentCategory && currentCategory.categoryId==category.categoryId">
+                        <ul class="row list-group">
+                            <li class="list-group-item list-group-item" *ngFor="let product of currentCategory.products">
+                                <div class="profile-detail-card row ">
+                                    <div class="col-xs-2 ">
+                                        <div class="row">
+                                            <img [src]="product.avatar" class="img-responsive img-rounded">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10 ">
+                                        <h4 class="list-group-item-heading">{{ product.name }} </h4>
+                                        <h5 class="list-group-item-text">
+                                            Preço: {{ product.price |  currency:'BRL':true:'1.2-2' }}
+                                        </h5>
+                                        <span> Tamanhos: {{ product.size }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
